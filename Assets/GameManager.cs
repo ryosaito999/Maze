@@ -11,10 +11,30 @@ public class GameManager : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-		
+		if (Input.GetKeyDown(KeyCode.Space)){
+			RestartGame();
+		}
+		if (Input.GetKeyDown(KeyCode.Q)){
+			QuitGame();
+		}	
 	}
 
-	void StartGame(){
+	void BeginGame(){
+		return;
+	}
+
+	void PauseGame(){
+		return;
+	}
+
+	void RestartGame(){
+		BeginGame();
+		return;
+	}
+
+	void QuitGame(){
+		Debug.Log("Quit Game\n");
+		Application.Quit();
 		return;
 	}
 }
